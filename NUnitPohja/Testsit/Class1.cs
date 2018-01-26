@@ -5,15 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace Testsit
 {
     [TestFixture]
     public class Class1
     {
         [Test]
-        public void shouldAddTwo()
+        public void FirstTest()
         {
-            
+            Assert.That(1, Is.EqualTo(1));
         }
     }
 }

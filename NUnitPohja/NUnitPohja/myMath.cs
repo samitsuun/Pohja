@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace NUnitPohja
 {
-   public class Program
+   public class myMath
     {
-        static void Main(string[] args)
+        public int Add(int a, int b)
         {
+            return a + b;
+        }
+
+        public int Sub(int a, int b)
+        {
+            return a - b;
         }
     }
 }
