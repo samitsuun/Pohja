@@ -10,7 +10,20 @@ namespace Harj
     {
         public int Summa(string luvut)
         {
-            return 0;
+            if (luvut.Equals(""))
+            {
+                return 0;
+            }
+
+            string[] numerot = luvut.Split(',', '\n');
+
+            int vastaus = 0;
+            foreach (var numero in numerot)
+            {
+                vastaus += int.Parse(numero);
+            }
+            
+            return vastaus;
         }
     }
 }

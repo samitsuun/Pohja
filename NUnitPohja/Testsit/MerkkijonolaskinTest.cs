@@ -11,12 +11,36 @@ namespace Testsit
     [TestFixture]
     public class MerkkijonolaskinTest
     {
+        Merkkijonolaskin laskin;
+
+        [SetUp]
+        public void TestienAlustus()
+        {
+            laskin = new Merkkijonolaskin();
+        }
+
         [Test]  //tyhjä palauttaa nollan.
         public void TyhjaMerkkijonoPalauttaNollan()
         {
-            Merkkijonolaskin laskin = new Merkkijonolaskin();
-
             Assert.That(laskin.Summa(""), Is.EqualTo(0));
+        }
+
+        [Test] //1numero = numero.
+        public void YksiNumeroPalauttaaAnnetunArvon()
+        {
+            Assert.That(laskin.Summa("5"), Is.EqualTo(5));
+        }
+
+        [Test] //2lukua pilkullla eroteltuna.
+        public void KaksiLukuaPilkullaEroteltunaPalauttaaSumman()
+        {
+            Assert.That(laskin.Summa("1,2"), Is.EqualTo(3));
+        }
+
+        [Test] //Useampi luku..
+        public void UseampiKuinKaksiLukuaPilkullaEroteltunaPalauttaaSumman()
+        {
+            Assert.That(laskin.Summa("1,2\n3,4,5,9"), Is.EqualTo(24));
         }
     }
 }
