@@ -46,7 +46,13 @@ namespace Testsit
         [Test]//miinusmerkkiset luvut aiheuttaa virheen.
         public void MiinusMerkkisetLuvutEivatToimi()
         {
-            Assert.That(laskin.Summa("-2,4,5,6,-7"), Is.EqualTo("error"));
+            Assert.That(laskin.Summa("-2,4,5,6,-7"), Is.EqualTo(000));
+        }
+
+        [Test]//Yli 4merkkiä pitkät luvut skipataan.
+        public void LiianPitkatLuvutOhitetaan()
+        {
+            Assert.That(laskin.Summa("4,6,1000,10"), Is.EqualTo(20));
         }
     }
 }

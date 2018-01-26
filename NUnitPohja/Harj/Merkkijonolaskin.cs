@@ -8,6 +8,8 @@ namespace Harj
 {
    public class Merkkijonolaskin
     {
+        private const int maxNumberLimit = 1000;
+
         public int Summa(string luvut)
         {
             if (luvut.Equals(""))
@@ -17,8 +19,13 @@ namespace Harj
 
             if (luvut.Contains('-'))
             {
-                Console.WriteLine("error");
+                return 000;
             }
+
+   /*         if (luvut.Length > 4)
+            {
+                luvut.Skip(0);
+            }  */
 
             string[] numerot = luvut.Split(',', '\n');
 
