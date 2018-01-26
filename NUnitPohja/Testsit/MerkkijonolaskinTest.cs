@@ -42,5 +42,11 @@ namespace Testsit
         {
             Assert.That(laskin.Summa("1,2\n3,4,5,9"), Is.EqualTo(24));
         }
+
+        [Test]//miinusmerkkiset luvut aiheuttaa virheen.
+        public void MiinusMerkkisetLuvutEivatToimi()
+        {
+            Assert.That(laskin.Summa("-2,4,5,6,-7"), Is.EqualTo("error"));
+        }
     }
 }

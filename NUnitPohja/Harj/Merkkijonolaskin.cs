@@ -15,9 +15,15 @@ namespace Harj
                 return 0;
             }
 
+            if (luvut.Contains('-'))
+            {
+                Console.WriteLine("error");
+            }
+
             string[] numerot = luvut.Split(',', '\n');
 
             int vastaus = 0;
+
             foreach (var numero in numerot)
             {
                 vastaus += int.Parse(numero);
