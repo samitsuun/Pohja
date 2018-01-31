@@ -10,6 +10,16 @@ namespace Menut3
     {
         static void Main(string[] args)
         {
+            List<StringBuilder> sblista = new List<StringBuilder>();
+            sblista.Add(new StringBuilder("abc"));
+            sblista.Add(new StringBuilder("def"));
+
+            StringBuilder sb = sblista[1];
+            Console.WriteLine(sb.Insert(0,"2"));
+            Console.WriteLine((sblista[0].Insert(0, "1")));
+
+
+
             //Dictionary tyyppinen luettelo:
             Dictionary<string, string> sanakirja = new Dictionary<string, string>();
             sanakirja.Add("sana", "ord");
