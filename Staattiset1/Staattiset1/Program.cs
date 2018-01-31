@@ -10,6 +10,16 @@ namespace Staattiset1
     {
         static void Main(string[] args)
         {
+            ApuToiminnat apu = new ApuToiminnat();
+            apu.nimi = "apu1";
+
+            ApuToiminnat apu2 = new ApuToiminnat();
+            apu2.nimi = "apu2";
+
+            Console.WriteLine(apu.GetNimi());
+            Console.WriteLine(apu2.GetNimi());
+            Console.WriteLine(ApuToiminnat.GetLuokanNimi());
+            
         }
     }
 }
