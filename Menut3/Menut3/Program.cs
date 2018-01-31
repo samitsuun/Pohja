@@ -12,6 +12,12 @@ namespace Menut3
         {
             //Dictionary tyyppinen luettelo:
             Dictionary<string, string> sanakirja = new Dictionary<string, string>();
+            sanakirja.Add("sana", "ord");
+            sanakirja.Add("kirja", "bok");
+            sanakirja.Add("koira", "hund");
+            sanakirja.Add("kyllä", "ja");
+
+            Console.WriteLine(sanakirja["kyllä"]);
 
 
 
@@ -25,8 +31,9 @@ namespace Menut3
                 switch (komento)
                 {
                     case "1":
-                        Console.WriteLine("Valitsit komennon 1");
-                        Console.WriteLine(LuoUusi(1));
+                        Console.WriteLine("Anna Hakusana: ");
+                        string sana = Console.ReadLine();
+                        Console.WriteLine(sanakirja[sana.ToLower().Trim()]);
                         break;
                     default:        // kaikissa muissa tapauksissa
                         break;
