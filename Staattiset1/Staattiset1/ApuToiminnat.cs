@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace Staattiset1
 {
-    class ApuToiminnat
+     class ApuToiminnat
     {
+        static int ctr = 0;
         public string nimi = "Tyhjä";
         public static string LuokanNimi = "ApuToiminnat";
 
+        public ApuToiminnat()
+        {
+            ctr++;
+        }
 
         public string GetNimi()
         {
@@ -24,7 +29,7 @@ namespace Staattiset1
 
         public static string GetLuokanNimi()
         {
-            return LuokanNimi;
+            return LuokanNimi + "-Luokasta on tehty " + ctr + " oliota.";
         }
     }
 }

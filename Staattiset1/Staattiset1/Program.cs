@@ -19,6 +19,7 @@ namespace Staattiset1
             Console.WriteLine(apu.GetNimi());
             Console.WriteLine(apu2.GetNimi());
             Console.WriteLine(ApuToiminnat.GetLuokanNimi());
+            Console.WriteLine(ApuToiminnat.LaskePituus("SaippuaKauppiaS"));
             
         }
     }
