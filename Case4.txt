@@ -1,0 +1,61 @@
+case 4:
+
+
+
+// Poista koiran tietoja/tiedot tähän, varmaan if-jutulla molemmat vaihtoehdot?
+
+
+functionFourSpecific(valinta);
+
+// Tai niinku että if tämä tai tämä ni se joko poistaa kaiken tai vaa yhen rivin
+
+
+break;
+
+
+default: Console.WriteLine("Virhe, anna numero välillä 1-4");
+
+break;
+
+
+
+
+private void functionFourSpecific(valinta)
+{
+//toinen switch case tänne
+
+Console.WriteLine("Valitse toiminto 5 tai 6");
+Tietojenlisäys valinta1 = new Tietojenlisäys();
+int valinta = Console.Read();
+
+
+while (valinta < 0)
+{
+
+Console.ReadLine();
+
+
+
+switch (valinta)
+{
+
+
+case 5:
+
+
+string uusiSana;
+string vanhaSana;
+Console.WriteLine("Minkä sijainnin haluat poistaa? ");
+
+vanhaSana = Console.ReadLine();
+
+Console.WriteLine("Kirjoita uusi suosikkisijainti: ");
+uusiSana = Console.ReadLine();
+string text = File.ReadAllText(@"c:\MyDir\Suosikkisijannit.txt");
+text = text.Replace(vanhaSana, uusiSana);
+
+File.WriteAllText(@"c:\MyDir\Suosikkisijannit.txt", text);
+using (StreamReader sr = File.OpenText(path))
+
+
+}
